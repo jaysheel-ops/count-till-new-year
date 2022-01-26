@@ -1,11 +1,15 @@
+@import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css);
 *, html{
+
   box-sizing: border-box;
   margin: 0;
   padding: 0;
   overflow: hidden;
+
 }
 
 body {
+
   height: 100vh;
   max-height: 100vh;
   max-width: 200vh;
@@ -17,96 +21,225 @@ body {
   flex-direction: column;
   color: white;
   font-family: 'Fira Code';
+
 }
 
 .main-content {
-    padding-top: 15rem;
+
+  padding-top: 15rem;
+
 }
 
 #header {
+
   display: flex;
   justify-content: center;
   font-size: 2rem;
   font-weight: normal;
   color: white;
   filter: drop-shadow(0 0 0 transparent) !important;
+
+}
+
+#header2 {
+  
+  display: flex;
+  justify-content: center;
+  font-size: 2rem;
+  font-weight: normal;
+  color: white;
+  filter: drop-shadow(0 0 0 transparent) !important;
+
 }
 
 .countdown-container {
+
   display: flex;
   justify-content: center;
+
 }
 
 .timer {
+
   margin-top: 10px;
   margin-bottom: 1rem;
   font-size: 10vh;
+  
 }
 
 .date-el {
+
   text-align: center;
   margin: 2rem 1rem 0rem 1rem;
+
 }
 
 .date-el span {
+
   font-size:1.5rem;
+
 }
 
 .snow {
+  
   position: absolute;
   width: 10px;
   height: 10px;
   background: white;
   border-radius: 50%;
+
 }
 
-@media screen and (min-width: 768px) and (max-width: 1024px)  {
+.social-container {
+  position: relative;
+  display: flex;
+}
+
+.social-container {
+  position: absolute;
+  bottom: 0px;
+  justify-content: center;
+  width: 100%;
+  margin: 0px;
+  text-align: center;
+}
+
+.social-icons {
+  padding: 0;
+  list-style: none;
+  margin: 1em;
+}
+.social-icons li {
+  display: inline-block;
+  margin: 0.15em;
+  position: relative;
+  font-size: 1.2em;
+}
+.social-icons i {
+  color: black;
+  position: absolute;
+  top: 21px;
+  left: 21px;
+  transition: all 265ms ease-out;
+}
+.social-icons a {
+  display: inline-block;
+}
+.social-icons a:before {
+  transform: scale(1);
+  -ms-transform: scale(1);
+  -webkit-transform: scale(1);
+  content: " ";
+  width: 60px;
+  height: 60px;
+  border-radius: 100%;
+  display: block;
+  background: linear-gradient(45deg,#f5f5f5, #f5f5f5);
+  transition: all 265ms ease-out;
+}
+.social-icons a:hover:before {
+  transform: scale(0);
+  transition: all 265ms ease-in;
+}
+.social-icons a:hover i {
+  transform: scale(2.2);
+  -ms-transform: scale(2.2);
+  -webkit-transform: scale(2.2);
+  color: black;
+  background: -webkit-linear-gradient(45deg,#f5f5f5, #f5f5f5);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: all 265ms ease-in;
+}
+
+@media screen and (max-width: 1366px)  {
+  
   html {
+
     overflow: hidden;
+
   }
  
   .countdown-container {
+
     display: flex;
     flex-direction: column;
-    
+    visibility: hidden;
+
   }
 
   .timer {
+
     font-size: 140px;
+
   }
   
   .date-el span {
+
     font-size: 32px;
+
   }
 
   #header {
+
     font-size: 56px;
+    visibility: hidden;
+
   }
   
+  #header2 {
 
+    font-size: 56px;
+    visibility: visible;
+
+  }
+  
+  .snow {
+
+    visibility: hidden;
+
+  }
+
+  
   
 }
 
 
-@media screen and (min-width: 1024px) {
+
+
+@media screen and (min-width: 1366px) {
+
   * {
+
     overflow: hidden;
+
   }
+
   .countdown-container{
    
     display: flex;
     flex-direction: row;
+    visibility: visible;
 
   }
 /* 
   .date-el span {
     font-size: 30px;
   } */
- 
-}
 
+  #header {
+    visibility: visible;
+  }
+  
+  #header2 {
+    visibility: hidden;
+  }
+  
+  .snow {
+    visibility: visible;
+  }
 
-.snow:nth-child(1) {
+  .snow:nth-child(1) {
   opacity: 0.4232;
   transform: translate(8.8818vw, -10px) scale(0.8629);
   animation: fall-1 29s -8s linear infinite;
@@ -2706,4 +2839,9 @@ body {
     transform: translate(94.65605vw, 100vh) scale(0.0712);
   }
 }
+ 
+}
+
+
+
 
